@@ -4,7 +4,7 @@ Copyright (c) 2015 Derek Brans, MIT license https://github.com/krux/postscribe/b
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define(factory);
+		define([], factory);
 	else if(typeof exports === 'object')
 		exports["postscribe"] = factory();
 	else
@@ -735,7 +735,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var target = {};
 
 	  var html;
-	  var work = this.document.createElement('div');
+	  var work = window.document.createElement('div');
 
 	  html = '<P><I></P></I>';
 	  work.innerHTML = html;
